@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, button, span {
+  font: inherit;
+  color: #262626;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+
+html, body {
+  background: white;
+  font-family: "-apple-system", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+.bold {
+  font-weight: 600;
+}
+
+a {
+  color: #003569;
+  text-decoration: none;
+}
+a.cor-primaria {
+  color: #3897f0;
+}
+
+nav {
+  height: 76px;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  background: white;
+  transition: height 0.2s ease-in-out;
+  top: 0;
+}
+
+button {
+  background-color: #3897f0;
+  border: 1px solid #3897f0;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0 !important;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  background: #FAFAFA;
+  border-radius: 3px;
+  border: 1px solid #e1e1e1;
+  color: #949494;
+  padding: 4px 0;
+  text-align: center;
+  width: 215px;
+  outline: 0 !important;
+  box-sizing: border-box;
+}
+
+.main-container {
+  max-width: 935px;
+  margin: 0 auto;
+  margin-top: 76px;
+  padding-top: 60px;
+}
+.main-container .user-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 28px;
+  margin-bottom: 44px;
+}
+.main-container .user-info .picture-container {
+  display: grid;
+  justify-content: center;
+}
+.main-container .user-info .picture-container .profile-pic {
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.main-container .user-info .picture-container .profile-pic-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(left bottom, #f90 0%, crimson 100%);
+  padding: 3px;
+  width: 160px;
+  height: 160px;
+}
+.main-container .user-info .additional-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+.main-container .user-info .additional-info .main-info,
+.main-container .user-info .additional-info .statistics-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.main-container .user-info .additional-info .main-info h1 {
+  margin-right: 40px;
+}
+.main-container .user-info .additional-info .statistics-container > .statistic + .statistic {
+  margin-left: 40px;
+}
+.main-container .images-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 28px;
+}
+
+/*# sourceMappingURL=styles.css.map */

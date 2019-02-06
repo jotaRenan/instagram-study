@@ -1,0 +1,147 @@
+$primary-color: #3897f0;
+$link-color: #003569;
+$background-color: #FAFAFA;
+$black: #262626;
+$white: white;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, button, span {
+    font: inherit;
+    color: $black;
+}
+
+h1 {
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+html, body {
+    background: $white;
+    font-family: "-apple-system","system-ui","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif";
+}
+
+.bold {
+    font-weight: 600;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &.cor-primaria {
+        color: $primary-color;
+    }
+}
+
+nav {
+    height: 76px;
+    border-bottom: 1px solid darken($background-color, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    background: $white;
+    transition: height .2s ease-in-out;
+    top: 0;
+}
+
+button {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 14px;
+    font-weight: 600;
+    outline: 0 !important;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input {
+    background: $background-color;
+    border-radius: 3px;
+    border: 1px solid darken($background-color, 10%);
+    color: darken($background-color, 40%);
+    padding: 4px 0;
+    text-align: center;
+    width: 215px;
+    outline: 0 !important;
+    box-sizing: border-box;
+}
+
+.main-container {
+    max-width: 935px;
+    margin: 0 auto;
+    margin-top: 76px;
+    padding-top: 60px;
+
+    .user-info {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 28px;
+        margin-bottom: 44px;
+        .picture-container {
+            display: grid;
+            justify-content: center;
+
+            .profile-pic {
+                border-radius: 50%;
+                border: 5px solid $white;
+                &-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background: -webkit-linear-gradient(left bottom, #f90 0% ,  crimson 100%);
+                    padding: 3px;
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+        }
+
+        .additional-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, auto);
+
+            .main-info,
+            .statistics-container  {
+                display: flex;
+                margin-bottom: 20px;
+            }
+
+            .main-info {
+                h1 {
+                    margin-right: 40px;
+                }
+            }
+
+            .statistics-container {
+                & > .statistic {
+                    & + .statistic {
+                        margin-left: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .images-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 28px;
+        
+    }
+
+}
